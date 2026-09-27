@@ -1,0 +1,655 @@
+/* =========================================
+   NOTAQUANTO
+   HOME
+========================================= */
+
+
+/* RESET */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    color: #252525;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #818cf8 0%,
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #a855f7 0%,
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    padding: 30px 20px;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.pagina {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 30px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.marca h1 {
+
+    color: white;
+
+    font-size: 27px;
+
+    letter-spacing: -0.7px;
+
+}
+
+
+.marca span {
+
+    display: block;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 13px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    margin-bottom: 17px;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+.hero h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    max-width: 650px;
+
+    margin: 0 auto 18px;
+
+}
+
+
+.hero h2 span {
+
+    display: block;
+
+    color: #ddd6fe;
+
+}
+
+
+.hero p {
+
+    max-width: 560px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   TÍTULO DA SEÇÃO
+========================================= */
+
+.titulo-secao {
+
+    margin-bottom: 16px;
+
+}
+
+
+.titulo-secao h3 {
+
+    color: white;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.titulo-secao p {
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   FERRAMENTA
+========================================= */
+
+.ferramenta {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    color: #222;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.ferramenta.destaque {
+
+    cursor: pointer;
+
+}
+
+
+.ferramenta.destaque:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.icone-ferramenta {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 27px;
+
+    border-radius: 15px;
+
+    background: #f3f4ff;
+
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.conteudo-ferramenta {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.titulo-ferramenta {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.titulo-ferramenta h4 {
+
+    font-size: 17px;
+
+    color: #292929;
+
+}
+
+
+.conteudo-ferramenta p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.badge {
+
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+}
+
+
+.disponivel {
+
+    color: #047857;
+
+    background: #d1fae5;
+
+}
+
+
+.breve {
+
+    color: #6b7280;
+
+    background: #f3f4f6;
+
+}
+
+
+/* =========================================
+   SETA
+========================================= */
+
+.seta {
+
+    color: #6366f1;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   CADEADO
+========================================= */
+
+.cadeado {
+
+    font-size: 18px;
+
+    opacity: 0.45;
+
+}
+
+
+/* =========================================
+   FERRAMENTA BLOQUEADA
+========================================= */
+
+.ferramenta.bloqueada {
+
+    opacity: 0.82;
+
+}
+
+
+/* =========================================
+   FRASE
+========================================= */
+
+.frase {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 35px 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding-top: 20px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+footer strong {
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+
+footer span {
+
+    font-size: 12px;
+
+}
+
+
+footer small {
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================
+   ANIMAÇÃO
+========================================= */
+
+.cabecalho,
+.hero,
+.ferramentas,
+.frase,
+footer {
+
+    animation:
+        aparecer 0.6s ease both;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding:
+            22px 15px;
+
+    }
+
+
+    .cabecalho {
+
+        margin-bottom: 42px;
+
+    }
+
+
+    .hero {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 34px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .ferramenta {
+
+        padding: 16px;
+
+        gap: 12px;
+
+    }
+
+
+    .icone-ferramenta {
+
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 23px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .titulo-ferramenta h4 {
+
+        font-size: 15px;
+
+    }
+
+
+    .conteudo-ferramenta p {
+
+        font-size: 12px;
+
+    }
+
+
+    .seta {
+
+        font-size: 23px;
+
+    }
+
+}
