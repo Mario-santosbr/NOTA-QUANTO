@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Recuperação - NotaQuanto</title>
+
+    <meta
+        name="description"
+        content="Descubra quanto você precisa tirar na recuperação de acordo com a regra usada pela sua escola."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card">
+
+        <!-- VOLTAR -->
+
+        <a href="../../index.html" class="voltar">
+            ← Voltar para o NotaQuanto
+        </a>
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            🎯
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <h1>
+            Calculadora de recuperação
+        </h1>
+
+        <p class="subtitulo">
+            Descubra quanto você precisa tirar na recuperação
+            de acordo com a regra da sua escola.
+        </p>
+
+
+        <!-- EXPLICAÇÃO GERAL -->
+
+        <div class="explicacao">
+
+            <div class="explicacao-titulo">
+                📖 Como funciona?
+            </div>
+
+            <p>
+                Cada escola pode usar uma regra diferente
+                para calcular a recuperação.
+            </p>
+
+            <p>
+                Escolha abaixo a regra usada pela sua escola.
+                Se não souber, pergunte ao professor ou consulte
+                o regimento escolar.
+            </p>
+
+        </div>
+
+
+        <!-- ESCOLHA DA REGRA -->
+
+        <div class="campo">
+
+            <label for="tipoRecuperacao">
+                🏫 Como sua escola calcula a recuperação?
+            </label>
+
+            <select id="tipoRecuperacao">
+
+                <option value="">
+                    Selecione uma opção
+                </option>
+
+                <option value="media">
+                    📚 Faz a média entre a nota atual e a recuperação
+                </option>
+
+                <option value="pesos">
+                    ⚖️ Usa pesos diferentes para as notas
+                </option>
+
+                <option value="substitui">
+                    🔄 A recuperação substitui a média anterior
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- AVISO -->
+
+        <div class="nao-sei">
+
+            <strong>
+                ❓ Não sabe qual regra sua escola usa?
+            </strong>
+
+            <p>
+                Não escolha uma fórmula no chute.
+                A regra pode variar de uma escola para outra.
+            </p>
+
+            <p>
+                Confira seu boletim, regimento escolar
+                ou pergunte ao professor ou à coordenação.
+            </p>
+
+        </div>
+
+
+        <!-- CAMPOS PRINCIPAIS -->
+
+        <div
+            id="camposPrincipais"
+            class="campos-escondidos"
+        >
+
+            <!-- MÉDIA NECESSÁRIA -->
+
+            <div class="campo">
+
+                <label for="mediaNecessaria">
+                    🎯 Média para passar
+                </label>
+
+                <input
+                    type="number"
+                    id="mediaNecessaria"
+                    value="7"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="Ex: 7"
+                >
+
+            </div>
+
+
+            <!-- MÉDIA ATUAL -->
+
+            <div class="campo">
+
+                <label for="mediaAtual">
+                    📊 Sua média atual
+                </label>
+
+                <input
+                    type="number"
+                    id="mediaAtual"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="Ex: 5"
+                >
+
+            </div>
+
+
+            <!-- PESOS -->
+
+            <div
+                id="camposPesos"
+                class="campos-pesos"
+            >
+
+                <div class="campo">
+
+                    <label for="pesoMedia">
+                        ⚖️ Peso da média
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pesoMedia"
+                        value="6"
+                        min="0.1"
+                        step="0.1"
+                        placeholder="Ex: 6"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="pesoRecuperacao">
+                        ⚖️ Peso da recuperação
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pesoRecuperacao"
+                        value="4"
+                        min="0.1"
+                        step="0.1"
+                        placeholder="Ex: 4"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLICAÇÃO DA REGRA -->
+
+            <div
+                id="explicacaoRegra"
+                class="explicacao-regra"
+            >
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="botoes">
+
+                <button
+                    class="botao-calcular"
+                    onclick="calcularRecuperacao()"
+                >
+                    Calcular minha recuperação 🚀
+                </button>
+
+                <button
+                    class="botao-limpar"
+                    onclick="limpar()"
+                >
+                    🔄 Limpar
+                </button>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div id="resultado"></div>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <p class="rodape">
+            NotaQuanto • Sua nota, sem complicação.
+        </p>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

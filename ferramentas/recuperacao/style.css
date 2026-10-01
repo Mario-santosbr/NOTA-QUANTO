@@ -1,0 +1,535 @@
+/* =========================================
+   NOTAQUANTO
+   CALCULADORA DE RECUPERAÇÃO
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+
+    animation: aparecer 0.6s ease;
+}
+
+
+/* =========================================
+   VOLTAR
+   ========================================= */
+
+.voltar {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #667eea;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.voltar:hover {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    background: #f1edff;
+
+    border-radius: 20px;
+
+    font-size: 38px;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+h1 {
+    text-align: center;
+
+    color: #222;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+
+    color: #777;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   EXPLICAÇÃO GERAL
+   ========================================= */
+
+.explicacao {
+    background: #f5f2ff;
+
+    border: 1px solid #e5ddff;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+}
+
+.explicacao-titulo {
+    font-weight: bold;
+
+    color: #4d3c91;
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.explicacao p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 6px;
+}
+
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #667eea;
+
+    box-shadow:
+        0 0 0 4px rgba(102, 126, 234, 0.12);
+}
+
+.campo select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   AVISO
+   ========================================= */
+
+.nao-sei {
+    background: #fff8df;
+
+    border: 1px solid #f0df9b;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    margin-bottom: 25px;
+}
+
+.nao-sei strong {
+    display: block;
+
+    color: #745c00;
+
+    margin-bottom: 6px;
+}
+
+.nao-sei p {
+    color: #746b4d;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   CAMPOS ESCONDIDOS
+   ========================================= */
+
+.campos-escondidos {
+    display: none;
+}
+
+.campos-escondidos.ativo {
+    display: block;
+
+    animation: aparecer 0.4s ease;
+}
+
+
+/* =========================================
+   CAMPOS DE PESOS
+   ========================================= */
+
+.campos-pesos {
+    display: none;
+}
+
+.campos-pesos.ativo {
+    display: block;
+
+    animation: aparecer 0.3s ease;
+}
+
+
+/* =========================================
+   EXPLICAÇÃO DA REGRA
+   ========================================= */
+
+.explicacao-regra {
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+
+    padding: 18px;
+
+    background: #f5f2ff;
+
+    border: 1px solid #e5ddff;
+
+    border-radius: 16px;
+
+    animation: aparecer 0.4s ease;
+}
+
+.explicacao-regra-titulo {
+    color: #4d3c91;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+.explicacao-regra p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 8px;
+}
+
+.formula {
+    margin-top: 12px;
+
+    padding: 12px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #4d3c91;
+
+    border: 1px dashed #cfc5ef;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.botoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.botao-calcular,
+.botao-limpar {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-calcular {
+    background: #667eea;
+
+    color: white;
+}
+
+.botao-calcular:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.botao-limpar {
+    background: #f1f1f1;
+
+    color: #555;
+}
+
+.botao-limpar:hover {
+    background: #e5e5e5;
+}
+
+
+/* =========================================
+   RESULTADO
+   ========================================= */
+
+#resultado {
+    margin-top: 25px;
+}
+
+.resultado {
+    padding: 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    animation: aparecer 0.4s ease;
+}
+
+.resultado-icone {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.resultado h2 {
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+.resultado p {
+    color: #555;
+
+    line-height: 1.6;
+}
+
+.resultado.sucesso {
+    background: #e9f9ef;
+
+    border: 2px solid #b9ebca;
+}
+
+.resultado.aviso {
+    background: #fff8df;
+
+    border: 2px solid #f3df8a;
+}
+
+.resultado.perigo {
+    background: #fff0f0;
+
+    border: 2px solid #f0b8b8;
+}
+
+.nota-recuperacao {
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #667eea;
+
+    margin: 15px 0;
+}
+
+.info-box {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ANIMAÇÃO
+   ========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+
+        font-size: 32px;
+    }
+
+    .explicacao-regra {
+        padding: 15px;
+    }
+
+}
