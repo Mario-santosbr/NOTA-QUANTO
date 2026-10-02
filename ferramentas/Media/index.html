@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -10,25 +10,25 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Calculadora de Média - NotaQuanto</title>
+    <title>
+        Calculadora de Média - NotaQuanto
+    </title>
 
     <meta
         name="description"
-        content="Calcule sua média e veja se você alcançou a média necessária."
+        content="Calcule sua média de forma rápida e simples."
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
-
-<body> 
-    <a href="../../index.html" class="voltar">← Voltar para o NotaQuanto</a>
+<body>
 
     <main class="card">
-
-
-        <!-- VOLTAR -->
 
         <a
             href="../../index.html"
@@ -37,26 +37,36 @@
             ← Voltar para o NotaQuanto
         </a>
 
-
-        <!-- LOGO -->
-
         <div class="logo">
             📊
         </div>
-
-
-        <!-- TÍTULO -->
 
         <h1>
             Calculadora de média
         </h1>
 
         <p class="subtitulo">
-            Descubra sua média e veja se você alcançou a média necessária.
+            Descubra sua média e veja se você alcançou
+            a média necessária.
         </p>
 
+        <div class="explicacao">
 
-        <!-- MÉDIA NECESSÁRIA -->
+            <div class="explicacao-titulo">
+                📖 Como funciona?
+            </div>
+
+            <p>
+                Digite a média que você precisa alcançar
+                e suas três notas.
+            </p>
+
+            <p>
+                A calculadora vai somar suas notas,
+                dividir por 3 e mostrar sua média atual.
+            </p>
+
+        </div>
 
         <div class="campo">
 
@@ -76,9 +86,6 @@
 
         </div>
 
-
-        <!-- NOTA 1 -->
-
         <div class="campo">
 
             <label for="nota1">
@@ -95,9 +102,6 @@
             >
 
         </div>
-
-
-        <!-- NOTA 2 -->
 
         <div class="campo">
 
@@ -116,9 +120,6 @@
 
         </div>
 
-
-        <!-- NOTA 3 -->
-
         <div class="campo">
 
             <label for="nota3">
@@ -135,9 +136,6 @@
             >
 
         </div>
-
-
-        <!-- BOTÕES -->
 
         <div class="botoes">
 
@@ -157,21 +155,20 @@
 
         </div>
 
-
-        <!-- RESULTADO -->
-
         <div id="resultado"></div>
 
+        <div class="aviso-final">
 
-        <!-- RODAPÉ -->
+            ℹ️ A média é calculada pela soma das três
+            notas dividida por 3.
+
+        </div>
 
         <p class="rodape">
             NotaQuanto • Sua nota, sem complicação.
         </p>
 
-
     </main>
-
 
     <script src="script.js"></script>
 
