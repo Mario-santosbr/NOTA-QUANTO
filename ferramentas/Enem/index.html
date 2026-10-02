@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Média do ENEM - NotaQuanto</title>
+
+    <meta
+        name="description"
+        content="Calcule sua média simples do ENEM usando suas cinco notas oficiais."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="card">
+
+        <!-- VOLTAR -->
+
+        <a href="../../index.html" class="voltar">
+            ← Voltar para o NotaQuanto
+        </a>
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            🧠
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <h1>
+            Média do ENEM
+        </h1>
+
+        <p class="subtitulo">
+            Digite suas cinco notas oficiais e descubra
+            sua média simples do ENEM.
+        </p>
+
+
+        <!-- EXPLICAÇÃO -->
+
+        <div class="explicacao">
+
+            <div class="explicacao-titulo">
+                📖 Como funciona?
+            </div>
+
+            <p>
+                Você recebe uma nota para cada uma das
+                quatro áreas do ENEM e uma nota para a redação.
+            </p>
+
+            <p>
+                A NotaQuanto soma as cinco notas e divide
+                o resultado por 5.
+            </p>
+
+        </div>
+
+
+        <!-- LINGUAGENS -->
+
+        <div class="campo">
+
+            <label for="linguagens">
+                📚 Linguagens
+            </label>
+
+            <input
+                type="number"
+                id="linguagens"
+                min="0"
+                max="1000"
+                step="0.1"
+                placeholder="Ex: 650"
+            >
+
+        </div>
+
+
+        <!-- HUMANAS -->
+
+        <div class="campo">
+
+            <label for="humanas">
+                🌎 Ciências Humanas
+            </label>
+
+            <input
+                type="number"
+                id="humanas"
+                min="0"
+                max="1000"
+                step="0.1"
+                placeholder="Ex: 700"
+            >
+
+        </div>
+
+
+        <!-- NATUREZA -->
+
+        <div class="campo">
+
+            <label for="natureza">
+                🧪 Ciências da Natureza
+            </label>
+
+            <input
+                type="number"
+                id="natureza"
+                min="0"
+                max="1000"
+                step="0.1"
+                placeholder="Ex: 620"
+            >
+
+        </div>
+
+
+        <!-- MATEMÁTICA -->
+
+        <div class="campo">
+
+            <label for="matematica">
+                ➗ Matemática
+            </label>
+
+            <input
+                type="number"
+                id="matematica"
+                min="0"
+                max="1000"
+                step="0.1"
+                placeholder="Ex: 780"
+            >
+
+        </div>
+
+
+        <!-- REDAÇÃO -->
+
+        <div class="campo">
+
+            <label for="redacao">
+                ✍️ Redação
+            </label>
+
+            <input
+                type="number"
+                id="redacao"
+                min="0"
+                max="1000"
+                step="0.1"
+                placeholder="Ex: 800"
+            >
+
+        </div>
+
+
+        <!-- BOTÕES -->
+
+        <div class="botoes">
+
+            <button
+                class="botao-calcular"
+                onclick="calcularMediaEnem()"
+            >
+                Calcular minha média 🚀
+            </button>
+
+            <button
+                class="botao-limpar"
+                onclick="limpar()"
+            >
+                🔄 Limpar
+            </button>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div id="resultado"></div>
+
+
+        <!-- AVISO -->
+
+        <div class="aviso-final">
+
+            ℹ️ Esta ferramenta calcula a
+            <strong>média simples</strong> das cinco notas.
+            Alguns processos seletivos podem utilizar
+            pesos diferentes.
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <p class="rodape">
+            NotaQuanto • Sua nota, sem complicação.
+        </p>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
