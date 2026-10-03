@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Faltas - NotaQuanto</title>
+
+    <meta
+        name="description"
+        content="Descubra quantas faltas você ainda pode ter sem ultrapassar o limite da sua escola."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card">
+
+        <a href="../../index.html" class="voltar">
+            ← Voltar para o NotaQuanto
+        </a>
+
+        <div class="logo">📅</div>
+
+        <h1>Calculadora de faltas</h1>
+
+        <p class="subtitulo">
+            Descubra quantas faltas você ainda pode ter sem ultrapassar o limite informado.
+        </p>
+
+        <div class="explicacao">
+
+            <div class="explicacao-titulo">
+                📖 Como funciona?
+            </div>
+
+            <p>
+                Informe o número total de aulas, quantas faltas você já teve
+                e qual é o percentual máximo de faltas permitido pela sua escola.
+            </p>
+
+            <p>
+                A calculadora mostra seu percentual atual e quantas aulas
+                você ainda pode faltar.
+            </p>
+
+        </div>
+
+        <div class="aviso-regra">
+
+            <strong>⚠️ Atenção</strong>
+
+            <p>
+                O limite de faltas pode variar de acordo com a escola,
+                curso ou instituição. Confira a regra do seu boletim,
+                regimento escolar ou pergunte à secretaria/professor.
+            </p>
+
+            <p>
+                O valor de <strong>25%</strong> abaixo é apenas um exemplo
+                inicial. Se sua instituição usar outro limite, altere o valor.
+            </p>
+
+        </div>
+
+        <div class="campo">
+
+            <label for="totalAulas">
+                📚 Total de aulas
+            </label>
+
+            <input
+                type="number"
+                id="totalAulas"
+                min="1"
+                step="1"
+                placeholder="Ex: 80"
+            >
+
+        </div>
+
+        <div class="campo">
+
+            <label for="faltasAtuais">
+                ❌ Faltas que você já teve
+            </label>
+
+            <input
+                type="number"
+                id="faltasAtuais"
+                min="0"
+                step="1"
+                placeholder="Ex: 10"
+            >
+
+        </div>
+
+        <div class="campo">
+
+            <label for="percentualMaximo">
+                🎯 Percentual máximo de faltas permitido
+            </label>
+
+            <div class="campo-percentual">
+
+                <input
+                    type="number"
+                    id="percentualMaximo"
+                    min="0.1"
+                    max="100"
+                    step="0.1"
+                    value="25"
+                    placeholder="Ex: 25"
+                >
+
+                <span>%</span>
+
+            </div>
+
+        </div>
+
+        <div class="botoes">
+
+            <button
+                class="botao-calcular"
+                onclick="calcularFaltas()"
+            >
+                Calcular minhas faltas 🚀
+            </button>
+
+            <button
+                class="botao-limpar"
+                onclick="limpar()"
+            >
+                🔄 Limpar
+            </button>
+
+        </div>
+
+        <div id="resultado"></div>
+
+        <div class="aviso-final">
+
+            ℹ️ O cálculo considera as informações que você informou.
+            Sempre confirme o limite oficial de faltas da sua instituição.
+
+        </div>
+
+        <p class="rodape">
+            NotaQuanto • Sua nota, sem complicação.
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
